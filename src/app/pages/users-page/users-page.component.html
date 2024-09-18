@@ -1,0 +1,8 @@
+<p>users-page works!</p>
+
+
+@for (item of users$|async; track item.username) {
+    <li> <a [routerLink]="'/user/'+item.username">{{ item.username }}</a></li>
+} @empty {
+    <li>There are no items.</li>
+}
