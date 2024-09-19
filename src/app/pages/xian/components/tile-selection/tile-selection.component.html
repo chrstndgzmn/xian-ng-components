@@ -1,1 +1,52 @@
-<p>tile-selection works!</p>
+<h1>tile-selection works!</h1>
+
+<div class="container">
+    <h2>Choose your favorites</h2>
+    <div class="list">
+ 
+        <div *ngIf="photo$|async; let photo;" class="form-element">
+            <input type="checkbox" name="books" [value]="photo.id" [id]="photo.id">
+            <label [for]="photo.id">
+                <div class="icon">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                </div>
+                <div class="title">
+                    Harry Potter
+                </div>
+            </label>
+        </div>
+        <div class="form-element">
+            <input type="checkbox" name="books" value="harry potter" id="harry_potter">
+            <label for="harry_potter">
+                <div class="icon">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                </div>
+                <div class="title">
+                    Harry Potter
+                </div>
+            </label>
+        </div>
+        <div class="form-element">
+            <input type="checkbox" name="books" value="The Witcher" id="the_witcher">
+            <label for="the_witcher">
+                <div class="icon">
+                    <i class="fa-solid fa-dog"></i>
+                </div>
+                <div class="title">
+                    The Witcher
+                </div>
+            </label>
+        </div>
+        <div class="form-element">
+            <input type="checkbox" name="books" value="Ender's Game" id="enders_game">
+            <label for="enders_game">
+                <div class="icon">
+                    <i class="fa-solid fa-gamepad"></i>
+                </div>
+                <div class="title">
+                    Ender's Game
+                </div>
+            </label>
+        </div>
+    </div>
+</div>
