@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="card__container">
+
+        @for (item of photos$|async; track $index) {
+        <!-- {{item|json}} -->
+        <!-- <xian-card>
+                <xian-card-title>{{item.title}}</xian-card-title>
+                <xian-card-description>{{item.title}}</xian-card-description>
+                <img [src]="item.url" [alt]="item.title">
+            </xian-card> -->
+
+        <article class="card__article">
+            <img class="card__img" [src]="item.url" [alt]="item.title">
+            <div class="card__data">
+                <span class="card__description">{{item.title}}</span>
+                <h2 class="card__title">{{getTitle(item.title)}}</h2>
+                <a href="#" class="card__button">Read More</a>
+            </div>
+        </article>
+        } @empty {
+
+        }
+    </div>
+
+</div>

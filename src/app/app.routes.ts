@@ -7,6 +7,8 @@ import { UserPageComponent } from './pages/user-page/user-page.component';
 import { XianComponent } from './pages/xian/xian.component';
 import { UsersPageComponent } from './pages/users-page/users-page.component';
 import { ThemeCheckboxComponent } from './pages/xian/components/theme-checkbox/theme-checkbox.component';
+import { CardComponent } from './pages/xian/components/image-card/card.component';
+import { ExampleCardComponent } from './pages/xian/containers/example-card/example-card.component';
 
 export const routes: Routes = [
 
@@ -21,14 +23,19 @@ export const routes: Routes = [
         component: XianComponent,
         children: [
             {
-                title:'Tile Select',
+                title: 'Tile Select',
                 path: 'tile-selection',
                 component: TileSelectionComponent
             },
             {
-                title:'Theme Checkbox',
+                title: 'Theme Checkbox',
                 path: 'theme-checkbox',
                 component: ThemeCheckboxComponent
+            },
+            {
+                title: 'Card',
+                path: 'card',
+                component: ExampleCardComponent
             }
         ]
     },
@@ -36,8 +43,8 @@ export const routes: Routes = [
         title: 'User List',
         path: 'users', //  list of users
         component: UsersPageComponent,
-        children:[
-            
+        children: [
+
         ]
     },
     {
